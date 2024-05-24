@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+
+    background: linear-gradient(to right, #87d392, #d5e1d7);
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    color: #fff;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+
+
+.container {
+
+    background: rgba(0, 0, 0, 0.8);
+
+    backdrop-filter: blur(5px);
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+
+    transition: all 0.5s ease;
+
+}
+
+
+
+.container:hover {
+
+    transform: scale(1.1);
+
+    background: rgba(0, 0, 0, 0.9);
+
+}
+
+
+
+h1 {
+
+    font-weight: 700;
+
+    text-align: center;
+
+    border-bottom: 3px solid #4CAF50;
+
+    padding-bottom: 15px;
+
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+#lightData, #batteryData, #distanceData {
+
+    font-size: 1.2em;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border-left: 5px solid #4CAF50;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.5s ease-out;
+
+}
+
+
+
+/* Keyframes for additional animation */
+
+@keyframes pulse {
+
+    0% { transform: scale(1); }
+
+    50% { transform: scale(1.1); }
+
+    100% { transform: scale(1); }
+
+}
+
+@keyframes bolding {
+
+    from {color: black;}
+    
+    to {color: #87d392;}
+
+}
+
+@keyframes hovered {
+    from {transform: scale(1);}
+    to {transform: scale(0.80);}
+}
+
+@keyframes clicked{
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+
+h1:hover {
+
+    animation: pulse 1s infinite;
+
+}
+
+body, html {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow-x: hidden;
+
+}
+
+
+
+.header {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 1000; /* Ensures it stays above all other content */
+
+    padding: 25px 20px;
+
+    background: rgb(255, 255, 255);
+
+    color: #ffffff;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    
+    text-align: center;
+
+    font-weight: bold;
+    
+    color: #1e1a1a;
+
+}
+
+#A2Y-logo{
+
+
+    position: relative;
+    
+    top: 90px;
+    
+    left: auto;
+    
+    bottom: 10px;
+    
+    float: right;
+    
+    height: 75px;
+    
+    width: 100px;
+    
+}
+
+#smu{
+    position: relative;
+    left: 6px;
+    top: 35px;
+    width: 170px;
+    height: 75px;
+}
+
+
+
+.container:active{
+    transform: scale(1.1);
+    animation-duration: 1s;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+
+.header:active{
+    animation: pulse 1s infinite;
+    animation-fill-mode: forwards;
+}
+
+#smu:hover{
+    animation: pulse 1s infinite;
+}
+
+#smu:active{
+    animation: clicked 1s infinite;
+}
+
+#A2Y-logo:active{
+    animation: clicked 1s infinite
+}
+
+#A2Y-logo:hover{
+    animation: pulse 1s infinite;
+}
+
+.header2 {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 1000; /* Ensures it stays above all other content */
+
+
+    background: #1e1a1a;
+
+    color: #1e1a1a;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    
+    padding-top: 50px 5px;
+
+    font-weight: bold;
+    
+    font-size: 125px;
+
+    
+}
+
+
+
+.header:hover{
+
+    animation: bolding 1s infinite;
+    
+    animation-direction: alternate;
+    
+}
+
+
+
+#lightData, #batteryData, #distanceData {
+
+    font-size: 1.1em; /* Slightly larger than normal for visibility, adjust as needed */
+
+    margin-top: 10px; /* Reduced margin-top from previous larger value */
+
+    padding: 8px; /* Reduced padding for a more compact look */
+
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+
+    border-left: 5px solid #4CAF50; /* Solid visual marker on the left */
+
+    transition: all 0.3s ease-out; /* Smooth transition for interaction effects */
+
+}
+
+
+
+#lightData:hover, #batteryData:hover, #distanceData:hover {
+
+    margin-left: 10px; /* Subtle movement on hover for a dynamic effect */
+
+    border-color: #ffffff; /* Changing border color on hover for visual feedback */
+
+    background: rgba(255, 255, 255, 0.15); /* Slightly more visible on hover */
+
+}
+
+#lightData:active, #batteryData:active, #distanceData:active {
+
+    margin-left: 10px; /* Subtle movement on hover for a dynamic effect */
+
+    border-color: #ffffff; /* Changing border color on hover for visual feedback */
+
+    background: rgba(255, 255, 255, 0.15); /* Slightly more visible on hover */
+
+}
+
+
+#lightData:after, #batteryData:after, #distanceData:after {
+
+    margin-left: 10px; /* Subtle movement on hover for a dynamic effect */
+
+    border-color: #ffffff; /* Changing border color on hover for visual feedback */
+
+    background: rgba(255, 255, 255, 0.15); /* Slightly more visible on hover */
+
+}
+.logo img {
+
+    height: 60px;
+
+}
+
+
+
+.log1 {
+
+    
+
+    position: absolute;
+
+    top: 1px;
+
+    right: 8px;
+
+    width: 100px; /* Adjust size as needed */
+
+    float: right ;
+
+    height: 110%;
+
+     /* Center vertically */
+
+
+}
+
+
+
+
+
+.project-title {
+
+    font-size: 1.2em;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    flex-grow: 1;
+ 
+    letter-spacing: 1px;
+ 
+}
+ 
+
+
+.team {
+ 
+    font-size: 0.9em;
+
+    text-align: right;
+ 
+}
+
+
+
+.container {
+
+    padding-top: 50px; /* Adding top padding to account for the fixed header */
+
+    background: #1e1a1a; /* Example background color to ensure visibility */
+
+    position: relative; /* Ensures layout flow starts below the fixed header */
+
+    width: 50%;
+
+    /* more styles for your container */
+
+}
+
+#lightData, #batteryData, #distanceData {
+
+    width: 75%; /* Removed width explicit value */
+
+    padding: 8px; /* Reduced padding for a more compact look */
+
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+
+    border-left: 5px solid #4CAF50; /* Solid visual marker on the left */
+
+    transition: all 0.3s ease-out; /* Smooth transition for interaction effects */
+
+}
+
+
+
+
+
+#lightData:hover, #batteryData:hover, #distanceData:hover {
+
+    background: rgba(49, 255, 186, 0.546); /* Slightly more visible on hover */
+
+}
+
